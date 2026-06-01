@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" font-family="Segoe UI, Arial, sans-serif">
+
+  <!-- Background -->
+  <rect width="1000" height="680" fill="#f8fafc" rx="12"/>
+
+  <!-- Title -->
+  <text x="500" y="40" text-anchor="middle" font-size="20" font-weight="800" fill="#0f172a">AI-Powered Product Strategy Assistant — Architecture</text>
+
+  <!-- ===== ROW 1: USER + DATA SOURCES ===== -->
+  <!-- User box -->
+  <rect x="30" y="70" width="120" height="60" rx="10" fill="#1e40af" opacity="0.9"/>
+  <text x="90" y="97" text-anchor="middle" font-size="13" fill="white" font-weight="700">👤 User</text>
+  <text x="90" y="115" text-anchor="middle" font-size="11" fill="#bfdbfe">Product Manager</text>
+
+  <!-- Data Sources box -->
+  <rect x="200" y="60" width="200" height="80" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="300" y="85" text-anchor="middle" font-size="13" font-weight="700" fill="#0f172a">📂 Data Sources</text>
+  <text x="300" y="103" text-anchor="middle" font-size="10" fill="#64748b">CSV · PDF · TXT · DOCX</text>
+  <text x="300" y="118" text-anchor="middle" font-size="10" fill="#64748b">Sales · Reviews · Competitor Docs</text>
+
+  <!-- Arrow: User → Data -->
+  <line x1="150" y1="100" x2="198" y2="100" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Arrow: Data → FastAPI -->
+  <line x1="400" y1="100" x2="448" y2="100" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- FastAPI box -->
+  <rect x="450" y="65" width="160" height="70" rx="10" fill="#0f172a"/>
+  <text x="530" y="93" text-anchor="middle" font-size="13" font-weight="700" fill="white">⚡ FastAPI</text>
+  <text x="530" y="110" text-anchor="middle" font-size="10" fill="#94a3b8">/analyze  /chat</text>
+  <text x="530" y="124" text-anchor="middle" font-size="10" fill="#94a3b8">/report/download</text>
+
+  <!-- Arrow: FastAPI → ChromaDB -->
+  <line x1="530" y1="135" x2="530" y2="173" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== ROW 2: ChromaDB ===== -->
+  <rect x="380" y="175" width="300" height="70" rx="10" fill="#fff" stroke="#8b5cf6" stroke-width="2"/>
+  <text x="530" y="203" text-anchor="middle" font-size="13" font-weight="700" fill="#7c3aed">🗄️ ChromaDB Vector Store</text>
+  <text x="530" y="221" text-anchor="middle" font-size="10" fill="#64748b">text-embedding-3-small · Persistent · Multi-file</text>
+  <text x="530" y="236" text-anchor="middle" font-size="10" fill="#64748b">Semantic Search on all uploaded documents</text>
+
+  <!-- Arrow: ChromaDB → LangGraph -->
+  <line x1="530" y1="245" x2="530" y2="283" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== ROW 3: LangGraph Pipeline ===== -->
+  <rect x="50" y="285" width="900" height="240" rx="12" fill="#eff6ff" stroke="#bfdbfe" stroke-width="2"/>
+  <text x="500" y="310" text-anchor="middle" font-size="14" font-weight="800" fill="#1e40af">🔗 LangGraph Multi-Agent Pipeline</text>
+  <text x="500" y="328" text-anchor="middle" font-size="11" fill="#3b82f6">Shared State · Sequential Execution · Agent Collaboration</text>
+
+  <!-- Agent boxes -->
+  <!-- Agent 1 -->
+  <rect x="70" y="340" width="130" height="75" rx="8" fill="#1e40af"/>
+  <text x="135" y="362" text-anchor="middle" font-size="12" fill="white" font-weight="700">📈 Sales Agent</text>
+  <text x="135" y="378" text-anchor="middle" font-size="9" fill="#bfdbfe">Revenue · Profit</text>
+  <text x="135" y="392" text-anchor="middle" font-size="9" fill="#bfdbfe">Top Products</text>
+  <text x="135" y="406" text-anchor="middle" font-size="9" fill="#bfdbfe">Regional Analysis</text>
+
+  <!-- Arrow -->
+  <line x1="200" y1="377" x2="218" y2="377" stroke="#1e40af" stroke-width="2" marker-end="url(#arrowBlue)"/>
+
+  <!-- Agent 2 -->
+  <rect x="220" y="340" width="130" height="75" rx="8" fill="#7c3aed"/>
+  <text x="285" y="362" text-anchor="middle" font-size="12" fill="white" font-weight="700">💬 Feedback</text>
+  <text x="285" y="378" text-anchor="middle" font-size="9" fill="#ede9fe">Sentiment Analysis</text>
+  <text x="285" y="392" text-anchor="middle" font-size="9" fill="#ede9fe">Complaints</text>
+  <text x="285" y="406" text-anchor="middle" font-size="9" fill="#ede9fe">Praises</text>
+
+  <!-- Arrow -->
+  <line x1="350" y1="377" x2="368" y2="377" stroke="#7c3aed" stroke-width="2" marker-end="url(#arrowPurple)"/>
+
+  <!-- Agent 3 -->
+  <rect x="370" y="340" width="130" height="75" rx="8" fill="#059669"/>
+  <text x="435" y="362" text-anchor="middle" font-size="12" fill="white" font-weight="700">🔷 SWOT Agent</text>
+  <text x="435" y="378" text-anchor="middle" font-size="9" fill="#d1fae5">Strengths</text>
+  <text x="435" y="392" text-anchor="middle" font-size="9" fill="#d1fae5">Weaknesses</text>
+  <text x="435" y="406" text-anchor="middle" font-size="9" fill="#d1fae5">Opportunities</text>
+
+  <!-- Arrow -->
+  <line x1="500" y1="377" x2="518" y2="377" stroke="#059669" stroke-width="2" marker-end="url(#arrowGreen)"/>
+
+  <!-- Agent 4 -->
+  <rect x="520" y="340" width="130" height="75" rx="8" fill="#d97706"/>
+  <text x="585" y="362" text-anchor="middle" font-size="12" fill="white" font-weight="700">🎯 Feature Agent</text>
+  <text x="585" y="378" text-anchor="middle" font-size="9" fill="#fef3c7">Prioritization</text>
+  <text x="585" y="392" text-anchor="middle" font-size="9" fill="#fef3c7">Opportunity Score</text>
+  <text x="585" y="406" text-anchor="middle" font-size="9" fill="#fef3c7">Roadmap Items</text>
+
+  <!-- Arrow -->
+  <line x1="650" y1="377" x2="668" y2="377" stroke="#d97706" stroke-width="2" marker-end="url(#arrowOrange)"/>
+
+  <!-- Agent 5 -->
+  <rect x="670" y="340" width="130" height="75" rx="8" fill="#dc2626"/>
+  <text x="735" y="362" text-anchor="middle" font-size="12" fill="white" font-weight="700">🚀 Strategy Agent</text>
+  <text x="735" y="378" text-anchor="middle" font-size="9" fill="#fee2e2">90-Day Plan</text>
+  <text x="735" y="392" text-anchor="middle" font-size="9" fill="#fee2e2">Roadmap</text>
+  <text x="735" y="406" text-anchor="middle" font-size="9" fill="#fee2e2">Recommendations</text>
+
+  <!-- Arrow -->
+  <line x1="800" y1="377" x2="818" y2="377" stroke="#dc2626" stroke-width="2" marker-end="url(#arrowRed)"/>
+
+  <!-- Agent 6 -->
+  <rect x="820" y="340" width="115" height="75" rx="8" fill="#0f172a"/>
+  <text x="877" y="362" text-anchor="middle" font-size="12" fill="white" font-weight="700">📄 Report Agent</text>
+  <text x="877" y="378" text-anchor="middle" font-size="9" fill="#94a3b8">PDF Generation</text>
+  <text x="877" y="392" text-anchor="middle" font-size="9" fill="#94a3b8">All Sections</text>
+  <text x="877" y="406" text-anchor="middle" font-size="9" fill="#94a3b8">ReportLab</text>
+
+  <!-- Shared state label -->
+  <text x="500" y="448" text-anchor="middle" font-size="11" fill="#3b82f6" font-style="italic">← Shared LangGraph State — each agent reads previous outputs →</text>
+  <text x="500" y="465" text-anchor="middle" font-size="10" fill="#64748b">sales_insights · feedback_insights · swot_analysis · feature_priorities · strategy_recommendations · pdf_path</text>
+
+  <!-- Arrow: LangGraph → Frontend -->
+  <line x1="500" y1="525" x2="500" y2="563" stroke="#94a3b8" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- ===== ROW 4: React Frontend ===== -->
+  <rect x="50" y="565" width="900" height="90" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+  <text x="500" y="590" text-anchor="middle" font-size="14" font-weight="800" fill="#0f172a">⚛️ React Frontend</text>
+
+  <!-- Dashboard tab -->
+  <rect x="100" y="600" width="230" height="42" rx="8" fill="#eff6ff" stroke="#bfdbfe" stroke-width="1"/>
+  <text x="215" y="618" text-anchor="middle" font-size="12" font-weight="600" fill="#1e40af">🏠 Dashboard Tab</text>
+  <text x="215" y="634" text-anchor="middle" font-size="10" fill="#3b82f6">Upload · Results Cards · PDF Download</text>
+
+  <!-- Chat tab -->
+  <rect x="380" y="600" width="230" height="42" rx="8" fill="#f0fdf4" stroke="#bbf7d0" stroke-width="1"/>
+  <text x="495" y="618" text-anchor="middle" font-size="12" font-weight="600" fill="#059669">💬 Ask AI Tab</text>
+  <text x="495" y="634" text-anchor="middle" font-size="10" fill="#10b981">RAG Chat · Quick Suggestions · Full Page</text>
+
+  <!-- Deployment -->
+  <rect x="660" y="600" width="250" height="42" rx="8" fill="#fef3c7" stroke="#fcd34d" stroke-width="1"/>
+  <text x="785" y="618" text-anchor="middle" font-size="12" font-weight="600" fill="#92400e">🚀 Render Deployment</text>
+  <text x="785" y="634" text-anchor="middle" font-size="10" fill="#d97706">Live URL · Auto-deploy from GitHub</text>
+
+  <!-- Arrow definitions -->
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#94a3b8"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#1e40af"/>
+    </marker>
+    <marker id="arrowPurple" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#7c3aed"/>
+    </marker>
+    <marker id="arrowGreen" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#059669"/>
+    </marker>
+    <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#d97706"/>
+    </marker>
+    <marker id="arrowRed" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#dc2626"/>
+    </marker>
+  </defs>
+
+</svg>

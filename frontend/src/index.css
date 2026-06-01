@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', 'Segoe UI', sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.fade-in { animation: fadeIn 0.4s ease forwards; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f5f9; }
+::-webkit-scrollbar-thumb { background: #94a3b8; border-radius: 99px; }
+
+/* Markdown styles */
+.mdBody h1, .mdBody h2, .mdBody h3, .mdBody h4 {
+  color: #0f172a; font-weight: 700; margin: 12px 0 6px;
+}
+.mdBody h1 { font-size: 18px; }
+.mdBody h2 { font-size: 16px; }
+.mdBody h3 { font-size: 15px; }
+.mdBody h4 { font-size: 14px; color: #1e40af; }
+.mdBody p  { margin: 6px 0; }
+.mdBody ul, .mdBody ol { padding-left: 20px; margin: 6px 0; }
+.mdBody li { margin: 4px 0; }
+.mdBody strong { color: #0f172a; font-weight: 700; }
+.mdBody em { color: #475569; }
+.mdBody hr { border: none; border-top: 1px solid #e2e8f0; margin: 12px 0; }
