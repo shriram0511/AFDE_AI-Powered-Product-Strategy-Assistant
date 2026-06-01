@@ -6,7 +6,9 @@ An intelligent multi-agent system that helps Product Managers analyze business d
 
 ## Live Demo
 
-> **Deployed URL:** _(add after Render deployment)_
+> **Deployed URL:** [https://afde-ai-powered-product-strategy.onrender.com](https://afde-ai-powered-product-strategy.onrender.com)
+> **GitHub Repo:** [shriram0511/AFDE_AI-Powered-Product-Strategy-Assistant](https://github.com/shriram0511/AFDE_AI-Powered-Product-Strategy-Assistant)
+> **Sample Report (PDF):** [product_strategy_report.pdf](backend/reports/product_strategy_report_20260601_185649.pdf)
 
 ---
 
@@ -17,6 +19,8 @@ Product Managers deal with large volumes of data — customer reviews, sales rep
 ---
 
 ## Architecture
+
+![Architecture Diagram](architecture.svg)
 
 ```
 User Uploads File (CSV / PDF / TXT / DOCX)
