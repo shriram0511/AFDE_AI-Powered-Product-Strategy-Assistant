@@ -191,9 +191,3 @@ After uploading `Sample Sales Data.csv`, the system generates:
 - ✅ Interactive Dashboard (React with stats cards)
 
 ---
-
-## Team / Author
-
-- **Name:** Shriram Kumar
-- **Email:** shriramkumar.an@prodapt.com
-- **Program:** AFDE — Prodapt Chennai
