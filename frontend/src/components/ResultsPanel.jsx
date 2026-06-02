@@ -15,7 +15,7 @@ export default function ResultsPanel({ result }) {
 
   const handleDownload = async () => {
     const res  = await axios.get('/report/download', { params: { pdf_path: result.pdf_path }, responseType: 'blob' })
-    const url  = window.URL.createObjectURL(new Blob([res.data]))
+    const url  = window.URL.createObjectURL(new Blob([res.data], { type: 'application/pdf' }))
     const link = document.createElement('a')
     link.href  = url
     link.setAttribute('download', 'product_strategy_report.pdf')
