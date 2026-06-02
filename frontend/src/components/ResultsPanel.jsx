@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import axios from 'axios'
 import ReactMarkdown from 'react-markdown'
 
 const SECTIONS = [
@@ -13,15 +12,9 @@ const SECTIONS = [
 export default function ResultsPanel({ result }) {
   const [open, setOpen] = useState(0)
 
-  const handleDownload = async () => {
-    const res  = await axios.get('/report/download', { params: { pdf_path: result.pdf_path }, responseType: 'blob' })
-    const url  = window.URL.createObjectURL(new Blob([res.data], { type: 'application/pdf' }))
-    const link = document.createElement('a')
-    link.href  = url
-    link.setAttribute('download', 'product_strategy_report.pdf')
-    document.body.appendChild(link)
-    link.click()
-    link.remove()
+  const handleDownload = () => {
+    const url = `/report/download?pdf_path=${encodeURIComponent(result.pdf_path)}`
+    window.open(url, '_blank')
   }
 
   return (
