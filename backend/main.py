@@ -23,21 +23,6 @@ FRONTEND_DIR = "../frontend/dist"
 os.makedirs(UPLOAD_DIR, exist_ok=True)
 os.makedirs("./reports", exist_ok=True)
 
-# Serve React frontend if built
-if os.path.exists(FRONTEND_DIR):
-    app.mount("/assets", StaticFiles(directory=f"{FRONTEND_DIR}/assets"), name="assets")
-
-    @app.get("/")
-    def serve_frontend():
-        return FileResponse(f"{FRONTEND_DIR}/index.html")
-
-    @app.get("/{full_path:path}")
-    def serve_spa(full_path: str):
-        file_path = os.path.join(FRONTEND_DIR, full_path)
-        if os.path.exists(file_path):
-            return FileResponse(file_path)
-        return FileResponse(f"{FRONTEND_DIR}/index.html")
-
 
 @app.get("/health")
 def health():
@@ -104,3 +89,19 @@ def download_report(pdf_path: str):
         media_type="application/pdf",
         filename="product_strategy_report.pdf"
     )
+
+
+# Static file serving must be LAST so API routes above take priority
+if os.path.exists(FRONTEND_DIR):
+    app.mount("/assets", StaticFiles(directory=f"{FRONTEND_DIR}/assets"), name="assets")
+
+    @app.get("/")
+    def serve_frontend():
+        return FileResponse(f"{FRONTEND_DIR}/index.html")
+
+    @app.get("/{full_path:path}")
+    def serve_spa(full_path: str):
+        file_path = os.path.join(FRONTEND_DIR, full_path)
+        if os.path.exists(file_path):
+            return FileResponse(file_path)
+        return FileResponse(f"{FRONTEND_DIR}/index.html")
